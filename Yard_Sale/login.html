@@ -28,29 +28,107 @@
             width: 100%;
             height: 100vh;
             place-items: center;
+            
+        }
+        .container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
 
         }
         form {
             display: flex;
             flex-direction: column;
             width: 300px;
+            justify-content: center;
+            align-items: left;
         }
+        
+        .logop {
+            text-align: center;
+            
+        }
+        .imgg {
+            height: 36px;
+            margin-bottom: 40px;
+        }
+        
+        label + input {
+            margin-bottom: 24px;
+        }
+        label {
+            margin-bottom: 12px;
+        }
+        
+        .button-login {
+            background-color: var(--hospital-green);
+            border: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            height: 48px;
+            color:  var(--white);
+            font-size: var(--md);
+            cursor: pointer;
+            font-weight: bold;
+            
+        }
+        #text {
+            font-size: var(--lg);
+            font-weight: 600;
+        }
+        .input {
+            border: none;
+            background-color: var(--text-input-field);
+            height: 30px;
+        
+        }
+        .sign {
+            background-color: var(--white);
+            border-color: var(--hospital-green);
+            height: 48px;
+            border-radius: 8px;
+            color: var(--hospital-green);
+            font-weight: bold;
+            margin-top: 150px;
+            cursor: pointer;
+            
+            
+            
+            
+        }
+        ::placeholder {
+            font-size: var(--md);
+            padding: 1;
+            
+        }
+        p {
+            text-align: center;
+            margin-top: 32px;
+        }
+        a {
+            color: var(--hospital-green);
+            text-decoration: none;
+            font-size: var(--sm);
+              
+        }
+        
+
     </style>
 </head>
 <body>
     <section class="section">
         <div class="container">
-            <div class="logop"><img src="/logos/logo_yard_sale.svg" alt="logo"></div>
+            <div class="logop" id="log"><img class="imgg" src="/logos/logo_yard_sale.svg" alt="logo"></div>
             <form action="/" class="form">
-                <label for="addres" class="email-addres">Email address</label>
-                <input type="email" placeholder="algo@dominio.com"  class="input-login">
+                <label for="addres" class="email-addres" id="text">Email address</label>
+                <input type="email" placeholder="algo@dominio.com"  class="input">
                 
-                <label for="pass" class="pass">Password</label>
-                <input type="password" placeholder="**********"  class="input-pass">
+                <label for="pass" class="pass" id="text">Password</label>
+                <input type="password" placeholder="**********"  class="input">
                 
                 <button class="button-login">Log in</button>
                 
-                <p>Forgot my password</p>
+                <p><a href="">Forgot my password</a></p>
 
                 <button class="sign">Sign up</button>
             </form>

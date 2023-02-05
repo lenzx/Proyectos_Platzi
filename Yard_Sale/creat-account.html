@@ -30,11 +30,14 @@
             height: 100vh;
         }
         .container {
+            display: grid;
             width: 300px;
+            grid-template-rows: auto 1fr auto;
         }
         form {
             display: flex;
             flex-direction: column;
+            
         }
         button {
             width: 100%;
@@ -67,20 +70,15 @@
         input::placeholder {
             font-size: var(--sm);
             color: var(--very-light-pink);
-
+            font-weight: 100;
         }
         @media (max-width: 640px)  {
+            .button {
+                margin-bottom: 10%;
+            }
             .container {
                 height: 100%;
-                
-                
             }
-            button {
-                
-                
-                
-            }
-            
         }
     </style>
 </head>

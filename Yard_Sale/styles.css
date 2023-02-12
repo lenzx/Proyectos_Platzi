@@ -43,7 +43,7 @@ nav {
 }
 .navbar-right {
     z-index: 20;
-    background-color: blue;
+    
 }
 .navbar-left ul {
     margin-left: 12px;
@@ -93,8 +93,8 @@ nav {
     border: 1px solid var(--very-light-pink);
     border-radius: 6px;
     padding: 20px 20px 0 20px;
+    background-color: white;
     z-index: 30;
-    background-color: red;
 }
 .desktop-menu ul {
     list-style: none;

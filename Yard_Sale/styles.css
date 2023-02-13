@@ -89,6 +89,7 @@ nav {
     border: 1px solid var(--very-light-pink);
     border-radius: 6px;
     padding: 20px 20px 0 20px;
+    background-color: var(--white);
 }
 .desktop-menu ul {
     list-style: none;
@@ -120,8 +121,10 @@ nav {
 .mobile-menu {
     padding: 24px;
     position: absolute;
-    top: 60px;
+    top: 76px;
     left: 0;
+    background-color: var(--white);
+    border: 1px solid var(--hospital-green);
 }
 .mobile-menu a {
     text-decoration: none;
@@ -155,7 +158,8 @@ nav {
 .product-detail {
     width: 360px;
     padding: 0 24px 24px;
-    
+    background-color: var(--white);
+    border: 1px solid var(--hospital-green);
     box-sizing: border-box;
     position: absolute;
     right: 0;
@@ -227,6 +231,49 @@ nav {
     font-weight: bold;
     height: 50px;
   }
+  /* shop principal  */
+.cards_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,240px);
+    gap: 26px;
+    place-content: center;
+    padding: 20px 10px;
+}
+.Product-card {
+    width: 240px;
+}
+.Product-card img {
+    width: 100%;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+.product-info figure {
+    margin: 0;
+}
+.product-info figure img {
+    width: 35px;
+    height: 35px;
+}
+.product-info div p:nth-child(1) {
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 16px;
+    margin-bottom: 4px ;
+    margin-top: 0;
+}
+.product-info div p:nth-child(2) {
+    font-size: var(--sm);
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--very-light-pink);
+}
 @media (max-width: 640px) {
     /* navbar */
     .menu {
@@ -246,6 +293,19 @@ nav {
     .product-detail {
         width: 100%;
       }
+    /* shop  */
+    .cards_container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,140px);
+    }
+    .Product-card {
+    width: 140px;
+    }
+    .Product-card img {
+        width: 140px;
+        height: 140px;
+        
+    }
 }
 @media (min-width: 641px) {
     .mobile-menu {

@@ -8,9 +8,13 @@ const m_menu = document.querySelector('.mobile-menu')
 const icon_shop = document.querySelector('.navbar-shopping-cart')
 const change_shop = document.querySelector('.product-detail')
 
+const product_detail = document.querySelector('.product_detail')
+const product_close = document.querySelector('.product_detail_close')
+
 const cardcontainer = document.querySelector('.cards_container')
 
-const lista = [menuchange,m_menu,change_shop]
+
+const lista = [menuchange,m_menu,change_shop,product_detail]
 
 
 function close(variable){
@@ -23,7 +27,10 @@ function close(variable){
 menuDesk.addEventListener('click',change_desktop)
 m_bar_menu.addEventListener('click',change_mobile)
 icon_shop.addEventListener('click',Shop_interactive)
-body.addEventListener('click',cerrar)
+product_close.addEventListener('click',opendetail)
+
+
+// product_close.addEventListener('click',opendetail)
 
 function change_desktop(){
     close(menuchange)
@@ -36,6 +43,14 @@ function change_mobile(){
 function Shop_interactive(){
     close(change_shop)
     change_shop.classList.toggle('inactive')
+}
+function opendetail(){
+    close(product_detail)
+    product_detail.classList.add('inactive')
+}
+function open_detail_img(){
+    close(product_detail)
+    product_detail.classList.remove('inactive')
 }
 
 const productList = []
@@ -64,7 +79,8 @@ function render(arr){
 
         const img_product = document.createElement('img')
         img_product.setAttribute('src', product.image)
-        img_product.setAttribute('alt', 'image')
+        img_product.setAttribute('alt', 'image');
+        img_product.addEventListener('click', open_detail_img);
 
         const product_info = document.createElement('div')
         product_info.classList.add('product-info')
